@@ -1,5 +1,6 @@
 .inline_input {
   display: flex;
+  margin-top: 20px;
 }
 
 .inline_input>.input_group:first-child {

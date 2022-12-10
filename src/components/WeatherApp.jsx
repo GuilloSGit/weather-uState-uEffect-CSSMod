@@ -22,7 +22,7 @@ export default function WeatherApp() {
             const json = await request.json();
             setWeather(json);
         } catch (error) {
-            
+            console.log(error);
         }
     }
 
@@ -34,7 +34,15 @@ export default function WeatherApp() {
     return (
         <div className={styles.weather_app}>
             <WeatherForm onChangeCity={handleChangeCity} />
-            <WeatherMainInfo weather={ weather }/>
+
+            {
+                weather ?
+                    <WeatherMainInfo weather={weather} /> :
+                    <div>
+                        <h5>Cargando...</h5>
+                        <img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="spinner" />
+                    </div>
+            }
         </div>
     );
 };

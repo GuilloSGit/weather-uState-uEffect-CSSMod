@@ -3,16 +3,18 @@ import styles from './weatherMainInfo.module.css';
 export default function WeatherMainInfo({ weather }) {
 
     function colorByTemp() {
-        if (weather?.current.temp_c >= 34) {
-            return styles.hot;
-        } else if (weather?.current.temp_c >= 22) {
-            return styles.warm;
-        } else if (weather?.current.temp_c >= 10) {
-            return styles.mild;
-        } else if (weather?.current.temp_c >= -10) {
-            return styles.cold;
-        } else {
-            return "";
+        if (weather) {
+            if (weather?.current?.temp_c >= 34) {
+                return styles.hot;
+            } else if (weather?.current.temp_c >= 22) {
+                return styles.warm;
+            } else if (weather?.current.temp_c >= 10) {
+                return styles.mild;
+            } else if (weather?.current.temp_c >= -10) {
+                return styles.cold;
+            } else {
+                return "";
+            }
         }
     }
 
