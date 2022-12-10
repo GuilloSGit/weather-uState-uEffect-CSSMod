@@ -12,6 +12,8 @@ export default function WeatherMainInfo({ weather }) {
                 return styles.mild;
             } else if (weather?.current.temp_c >= -10) {
                 return styles.cold;
+            } else if (weather?.current.temp_c >= -50) {
+                return styles.frozzen;
             } else {
                 return "";
             }

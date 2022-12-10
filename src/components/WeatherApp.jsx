@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import WeatherForm from './WeatherForm';
 import WeatherMainInfo from './WeatherMainInfo';
+import WeatherError from './WeatherError';
+import WeatherLoading from './WeatherLoading';
 
 import styles from './weatherApp.module.css';
 
@@ -8,10 +10,11 @@ export default function WeatherApp() {
     const [weather, setWeather] = useState(null);
     useEffect(() => {
         loadInfo();
-    }, [])
+    },[])
 
     useEffect(() => {
-        document.title = `Clima en ${weather?.location.name} - ${weather?.location.country}`
+        if(weather?.location?.name)
+            document.title = `Clima en ${weather?.location.name} - ${weather?.location.country}`
     }, [weather])
 
     async function loadInfo(city = 'Villa Aberastain') {
@@ -21,6 +24,7 @@ export default function WeatherApp() {
             );
             const json = await request.json();
             setWeather(json);
+            console.log(weather)
         } catch (error) {
             console.log(error);
         }
@@ -34,14 +38,11 @@ export default function WeatherApp() {
     return (
         <div className={styles.weather_app}>
             <WeatherForm onChangeCity={handleChangeCity} />
-
             {
-                weather ?
-                    <WeatherMainInfo weather={weather} /> :
-                    <div>
-                        <h5>Cargando...</h5>
-                        <img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="spinner" />
-                    </div>
+                weather?.error ?
+                    <WeatherError /> : 
+                weather?.current ?
+                    <WeatherMainInfo weather={weather} /> : <WeatherLoading />
             }
         </div>
     );
