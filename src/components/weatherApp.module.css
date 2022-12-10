@@ -1,0 +1,9 @@
+.weather_app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+  color: rgb(12, 11, 11);
+  background-color: rgba(141, 138, 138, 0.774);
+}

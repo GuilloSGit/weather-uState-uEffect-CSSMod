@@ -1,23 +1,22 @@
-import logo from './logo.svg';
+import WeatherApp from './components/WeatherApp';
 import './App.css';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <WeatherApp />
+      <footer className="footerContainer">
+        <div className="footerdiv">
+          <p>© Guillermo Andrada 2022</p>
+          <p>Powered by <a href="https://www.weatherapi.com/" title="Weather API">WeatherAPI.com</a></p>
+          <a href="https://www.weatherapi.com/" title="Free Weather API">
+            <img className='weatherapiLogo'
+              src='//cdn.weatherapi.com/v4/images/weatherapi_logo.png' alt="Weather data by WeatherAPI.com" border="0" />
+          </a>
+          
+        </div>
+      </footer>
     </div>
   );
 }

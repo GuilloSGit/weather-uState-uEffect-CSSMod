@@ -1,0 +1,61 @@
+.inline_input {
+  display: flex;
+}
+
+.inline_input>.input_group:first-child {
+  margin-right: 5px;
+}
+
+.inline_input>.input_group:last-child {
+  margin-left: 5px;
+}
+
+.inline_input>.input_group {
+  flex: 1;
+}
+
+.input_group {
+  position: relative;
+  display: flex;
+  margin-bottom: 40px;
+}
+
+input {
+  width: 100%;
+  display: block;
+  font-size: 16px;
+  border-radius: 3px;
+  border: 1px #DAE1E7 solid;
+  padding: 10px 10px 10px 10px;
+  transition: 0.3s ease all;
+  -moz-transition:0.3s ease all; 
+  -webkit-transition:0.3s ease all;
+}
+
+input:focus { 
+  outline: none;
+  border: 1px solid #18378b;
+}
+
+label {
+  color: #407983;
+  font-size: 16px;
+  position: absolute;
+  pointer-events:none;
+  left: 15px;
+  top: 9px;
+  transition: 0.2 ease all;
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+input:focus ~ label, input:valid ~ label {
+  top: -20px;
+  left: 5px;
+  font-size: 14px;
+  color: #031d72;
+}
+
+input:focus ~ label {
+  color: #060c0c;
+}

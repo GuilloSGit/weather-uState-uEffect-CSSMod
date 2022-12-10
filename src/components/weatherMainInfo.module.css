@@ -1,0 +1,52 @@
+.cardContainer {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 25px;
+    border-radius: 10px;
+}
+
+.cityName {
+    font-size: 30px;
+    font-weight: 600;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    max-width: 400px;
+}
+
+.map {
+    width: 600px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px #1b1b1b;
+}
+
+.hot {
+    color: #121212;
+    background-image: url('https://www.urbancultivator.net/wp-content/uploads/2015/06/ala_moana_beach_park_oahu_hawaii_70671-1920x1200-1024x640-9169142.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.warm {
+    color: #656565;
+    background-image: url('https://www.bucksherald.co.uk/webimg/b25lY21zOjU2OGM3OWViLTdiNGQtNGY0NC05MmI4LTdhMTc1NjQyYjdmMjo1OTRkMjNmNi0xMDIzLTQ2YjUtOGQ1OC01ZTdhYzljZTYwNWM=.jpg?quality=65&smart&width=640');
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.mild {
+    color: #060606;
+    background-image: url('https://i.guim.co.uk/img/media/09dc830e18de1d5d2daeb8a81ea42197399d88be/0_0_6000_3600/master/6000.jpg?width=620&quality=85&dpr=1&s=none');
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.cold {
+    color: #FFF;
+    font-weight: 800;
+    background-image: url('https://images.unsplash.com/photo-1612208695882-02f2322b7fee?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80');
+    background-repeat: no-repeat;
+    background-size:cover;
+}
