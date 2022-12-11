@@ -1,9 +1,9 @@
+import styles from './weatherLoading.module.css';
+
 export default function WeatherLoading() {
     return (
-        <div className="cardContainer">
-            <div>
-                <h5>Cargando...</h5>
-                <img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="spinner" />
+        <div className={styles.loadingContainer}>
+            <div className={styles.spinner}>
             </div>
         </div>
     );

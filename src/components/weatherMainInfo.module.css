@@ -1,9 +1,9 @@
 .cardContainer {
-    padding: 20px;
+    padding: 12px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    gap: 25px;
+    gap: 20px;
     border-radius: 10px;
 }
 
@@ -17,7 +17,6 @@
 }
 
 .map {
-    width: 600px;
     border-radius: 10px;
     box-shadow: 2px 2px 8px #1b1b1b;
 }
@@ -57,4 +56,56 @@
     background-image: url('https://www.mrrooter.com/sub/20503/images/tips-for-winterizing-pipes-and-plumbing-in-your-home.jpg');
     background-repeat: no-repeat;
     background-size:cover;
+}
+
+.infoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.additionalInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 400px;
+    gap: 15px;
+}
+
+.humidity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feelsLike {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.conditionText {
+    margin: 0 0;
+    padding: 0 0;
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (max-width: 657px) {
+    .cardContainer {
+        margin-bottom: 85px;
+        padding: 4px;
+    }
+}
+@media screen and (max-width: 850px) {
+    .cardContainer {
+        padding: 10px;
+    }
 }

@@ -23,8 +23,9 @@ export default function WeatherApp() {
                 `${process.env.REACT_APP_URL}&key=${process.env.REACT_APP_API_KEY}&q=${city}`
             );
             const json = await request.json();
-            setWeather(json);
-            console.log(weather)
+            setTimeout(() => {
+                setWeather(json);
+            }, 2000);
         } catch (error) {
             console.log(error);
         }
